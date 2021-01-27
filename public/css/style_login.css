@@ -1,0 +1,128 @@
+body {
+    font-family: 'Poppins';
+	background-image:url("/img/background.jpg");
+	background-repeat: repeat;
+}
+
+.content-login{
+	width:65em;
+	display:flex;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: 0px 5px 25px #888888;
+	border-radius:20px;
+}
+.kotak-1{
+	width:50%;
+}
+
+.kotak-2{
+	width:50%;
+	background-color: #fff;
+	position: relative; 
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+
+.kotak-1 img{
+	width: 100%;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+}
+
+.login{
+	text-align:center;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 70%);
+}
+.coloum-login{
+	position:relative;
+}
+
+.form-group{
+	width: 80%;
+}
+.login h2{
+	font-size:18px;
+}
+.login ul{
+	list-style-type: none;
+	padding: 0;
+	overflow: hidden;
+	margin-bottom:10px;
+}
+.isi-form{
+	width:200%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-40%, 60%);
+}
+.login li{
+	font-size:16px;
+	display:inline-block;
+	text-decoration: none;
+	padding:8px;
+	border-radius:5px;
+	cursor: pointer;
+}
+
+.active{
+	background-color: #FFB31F;
+	color:white;
+}
+
+/*.login .form-group{
+	width:100%;
+	display:block;
+	padding:6px 12px;
+	font-size:14px;
+	background-color:#fff;
+	border: 1px solid #FFB31F;
+}*/
+
+input[type=text] {
+	width: 100%;
+	margin-bottom:10px;
+	padding:7px;
+	border:1px solid #888;
+	border-radius:5px;
+	font-family: 'Open Sans';
+}
+input[type=password] {
+	width: 100%;
+	margin-bottom:10px;
+	padding:7px;
+	border:1px solid #888;
+	border-radius:5px;
+	font-family: 'Open Sans';
+}
+button[type=submit]{
+	width: 100%;
+	padding:10px;
+	background-color:#FFB31F;
+	color: white;
+	border-radius:5px;
+	cursor: pointer;
+	border: none;
+	font-weight:bold;
+	font-size:15px;
+	font-family: 'Open Sans';
+}
+input[type=text]:focus {
+	outline: none !important;
+	border:2px solid #FFB31F;
+}
+
+input[type=password]:focus {
+	outline: none !important;
+	border:2px solid #FFB31F;
+}
+button[type=submit]:hover{
+	background-color:#F9870F;
+	transition: .3s;
+}
+

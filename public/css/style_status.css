@@ -1,0 +1,50 @@
+.judul, .judul h1, .judul p a{
+    color: black;
+}
+.container{
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+.status{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(213, 204, 190, 0.6);
+    padding: 3vw;
+    border-radius: 10px 10px 0 0;
+}
+.status img{
+    width: 5vw;
+}
+.status h1{
+    font-size: 2.2vw;
+    font-weight: 600;
+    margin-left: 2vw;
+}
+table, th, td {
+    border: 2px solid #DBD4C8;
+    border-collapse: collapse;
+    padding: 10px;
+    font-size:1vw;
+    font-weight: 400;
+}
+tr.bg-gray{
+    background: #D5CCBE; 
+}
+.bg-gray th{
+    font-weight: 600;
+    padding: 20px;
+}
+tr th.Diterima{
+    color:#1AB000;
+}
+tr th.Menunggu{
+    color:#f88409;
+}
+tr th.Ditolak{
+    color:#FA0C0C;
+}
+tr th.Selesai{
+    color:black;
+}

@@ -1,0 +1,84 @@
+.judul, .judul h1, .judul p a{
+    color: white!important;
+}
+.container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+.side-nav{
+    width: 250px;
+    height: 100%;
+    background-color: #333456;
+    border-radius: 10px;
+}
+.side-nav h1{
+    color: white;
+    font-size: 26px;
+    font-weight: 600;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.sticky {
+    position: fixed;
+    top: 90px;
+}
+  
+.sticky + .tatib-lab {
+    padding-left: 250px;
+}
+
+.berat,.sedang, .ringan{
+    margin-top: 35px;
+}
+.berat h2, .sedang h2, .ringan h2{
+    padding: 5px;
+    font-size: 12px;
+    text-align: center;
+    margin: 0 auto;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    width: 150px;
+}
+.berat h2{
+    background: #FF4343;
+}
+.sedang h2{
+    background: #FFB443;
+}
+.ringan h2{
+    background: #43ff62;
+}
+
+.berat p,.sedang p,.ringan p{
+    padding: 0 20px;
+    color:white;
+    font-weight: 600;
+    font-size: 14px;
+}
+.berat h1,.sedang h1,.ringan h1{
+    padding:20px 10px;
+    color:black;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.tatib-lab{
+    width: 950px;
+    margin-bottom: 200px;
+}
+.tatib-lab h1{
+    text-align: center;
+}
+.border{
+    border: 2px solid #FF4343;
+    margin: 20px;
+    margin-top: -15px;
+    border-radius: 10px;
+}
+.border-orange{
+    border: 2px solid #FFB443;
+}
+.border-kuning{
+    border: 2px solid#43ff62;
+}

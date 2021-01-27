@@ -1,0 +1,434 @@
+.judul, .judul h1, .judul p a{
+    color: white!important;
+}
+
+.container{
+    display: flex;
+    padding-right:1.5%;
+    padding-left: 1.5%;
+}
+.side-nav img{
+    position: absolute;
+    margin-left: -5%;
+    margin-right: -5%;
+    z-index: 0;
+    width: 100%;
+}
+
+.side-nav .background{
+    width: 100%;
+    background-color: #1A1C20;
+    border-radius: 10px;
+    position: relative;
+}
+    .divide{
+        width: 2%;
+    }
+.panel-info{
+    width: 67.5%;
+    margin-bottom: 100px;
+}
+
+.panel-info p{
+    position: relative;
+    z-index: 2;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+.panel-info .jadwal-display{
+    background-color: rgba(26, 28, 32, 0.5);
+    border-radius: 10px;
+    padding: 20px 40px;
+}
+
+a {
+    text-decoration: none;
+}
+  
+  .side-nav  {
+      align-items: center;
+      justify-content: center;
+      width: 30.5%;
+      margin-bottom: 100px;
+  }
+  .current-month li{
+      list-style: none;
+  }
+  .calendar {
+      background: #3D3F42;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, .3);
+      perspective: 1000;
+      transition: .9s;
+      transform-style: preserve-3d;
+  }
+  
+  /* Front - Calendar */
+  .front {
+      transform: rotateY(0deg);
+      
+  }
+  
+  .current-date {
+      border-bottom: 1px solid rgba(73, 114, 133, .6);
+      display: flex;
+      justify-content: space-between;
+      padding: 1.5vw 2.3vw;
+  }
+#current-time{
+      color: #dfebed;
+      font-size: 1.4em;
+      font-weight: 300;
+      display: flex;
+      align-items: center;
+}
+  
+  .current-date h1 {
+      color: #dfebed;
+      font-size: 1.4em;
+      font-weight: 300;
+      margin:0;
+      text-align: center;
+  }
+  
+  .week-days {
+      color: #dfebed;
+      display: flex;
+      justify-content: space-between;
+      font-weight: 600;
+      font-size:1.1vw;
+      padding: 1vw 2.3vw;
+  }
+  
+  .days {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+  }
+  
+  .weeks {
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      padding: 0 2.3vw;
+      font-size:1vw;
+  }
+  
+  .weeks div {
+      display: flex;
+      font-size: 1.2em;
+      font-weight: 300;
+      justify-content: space-between;
+      margin-bottom: 1vw;
+  }
+  
+  .last-month {
+    opacity: .3;
+  }
+  .next-month {
+    opacity: .3;
+}
+  
+  .weeks span {
+      padding: .7vw;
+  }
+  
+  .weeks span.active {
+      background: #f78536;
+      border-radius: 50%;
+      height: 1vw;
+      width: 1vw;
+      padding-bottom: 1.4vw;
+      padding-left: 1vw;
+      padding-right: 1vw;
+      text-align: center;
+  }
+  
+  .weeks span:not(.last-month):hover {
+      cursor: pointer;
+      font-weight: 600;
+  }
+  .weeks span:not(.next-month):hover {
+        cursor: pointer;
+        font-weight: 600;
+}
+  
+  .event {
+      position: relative;
+  }
+  
+  .event:after {
+      content: '.';
+      color: #fa0b0b;
+      font-size: 5em;
+      position: absolute;
+      top: -0.9em;
+      right: -7px;
+  }
+  
+  /* Back - Event form */
+  
+  .back {
+      transform: rotateY(180deg);
+  }
+
+  .info {
+      color: #dfebed;
+      padding: 1.5vw 2.3vw;
+  }
+
+  /* Flip animation */
+  .flip {
+      transform: rotateY(180deg);
+  }
+  
+  .front, .back {
+      backface-visibility: hidden;
+  }
+  
+  .btn-jadwal{
+    width: 100%;
+    font-size:1.1vw;
+    cursor: pointer;
+    border-top: 1px solid rgba(73, 114, 133, .6);
+}
+.btn-jadwal:hover{
+    background: #2a2e35;
+    border-radius: 0 0 10px 10px;
+}
+.btn-jadwal p{
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 3px;
+    padding: 25px;
+    margin:0; 
+}
+.btn-kembali{
+    width: 100%;
+    font-size:1.1vw;
+    cursor: pointer;
+    border-top: 1px solid rgba(73, 114, 133, .6);
+}
+.btn-kembali:hover{
+    background: #2a2e35;
+    border-radius: 0 0 10px 10px;
+}
+.btn-kembali p{
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 3px;
+    padding: 25px;
+    margin:0; 
+}
+
+.lab-sekret{
+    width: 100%;
+    margin-top: 20px;
+    background-color: #FFD5CD;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.lab-fik{
+    display: flex;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    background-color: #3D3F42;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+.active-dropdown{
+    background-color: #1A1C20;
+}
+.lab-fik p{
+    padding-left: 15px;
+}
+.lab-lt-2,.lab-lt-3,.lab-lt-4{
+    margin-top: 20px;
+    z-index: 2;
+}
+.lab-fik .fas{
+    transition: .3s ease-in-out;
+    display: flex;
+    margin-left: auto;
+    font-size: 26px;
+    padding-right: 10px;
+    align-items: center;
+}
+.dropdown-content-1,.dropdown-content-2,.dropdown-content-3{
+    display: none;
+}
+.dropdown-content-3{
+    position: relative;
+    z-index: 1;
+}
+.rotated{
+    transform: rotate(90deg);
+    margin-right: 12px;
+    margin-top: 12px;
+}
+.show-menu{
+    display: block;
+}
+.dropdown{
+    display: flex;
+    margin-top: -15px;
+    padding-top:20px;
+    padding-bottom: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    background: #C4C4C4;
+    border-radius: 10px;
+}
+.dropdown p{
+    font-weight: 400;
+    font-size: 14px;
+}
+.btn-lab{
+    cursor: pointer;
+}
+#current-month{
+    font-size: 1.5vw;
+}
+#current-day{
+    font-size: 1.5vw;
+}
+#today{
+    font-size: 1.5vw;
+}
+#current-time{
+    font-size: 1.5vw;
+}
+#menu{
+    width: 33.3%;
+    cursor: pointer;
+    text-align: center;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    background-color: white;
+}
+#menu a{
+    color:black;
+}
+
+#menu.current{
+    background-color: #FED676;
+}
+
+.panel-info .info-jadwal{
+    display: flex;
+    position: relative;
+    margin-top: 15px;
+}
+.panel-info .info-jadwal .status{
+    background-color: #3D3F42;
+    border-radius: 10px;
+    width: 30%;
+    margin-left: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.panel-info .info-jadwal .info{
+    background-color: #3D3F42;
+    border-radius: 10px;
+    padding:10px 25px;
+    padding-top: 5px;
+    padding-left: 7vw;
+    margin-left: 5vw;
+    width: 69%;
+}
+.panel-info .info-jadwal img{
+    position: absolute;
+    left: -10;
+    top: 5%;
+    height: 90%;
+}
+.panel-info .info-jadwal .info h1{
+    font-weight: bold;
+    font-size: 1.3vw;
+}
+.panel-info .info-jadwal .info p{
+    font-weight: normal;
+    font-size: 1.1vw;
+    margin: 0;
+}
+
+.panel-info .info-jadwal .status h1{
+    font-weight: bold;
+    font-size: 1.2vw;
+    line-height:25px;
+    margin: 0;
+}
+.status h1.Selesai{
+    color: #8BEE89;
+}
+.status h1.Dibatalkan{
+    color: #EE9B89;
+}
+.status h1.Berlangsung{
+    color: #FD9E00;
+}
+.status h1.Dijadwalkan{
+    color: #fdec00;
+}
+.status h1{
+    color: white;
+}
+.info .title{
+    display: flex;
+}
+.title img{
+    width: 2.8vw;
+    padding-left:1.5vw;
+}
+.title h1{
+    font-weight: 600;
+    font-size: 2vw;
+    margin-top:0;
+    padding-left:3.5vw;
+}
+
+.list p{
+    line-height:10px;
+    font-size: 1.1vw;
+}
+.list p.matkul{
+    line-height:20px;
+    font-size: 1.1vw;
+}
+.list hr{
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
+.list:last-of-type hr{
+    display:none;
+}
+
+.panel-info .info-jadwal .status p{
+    font-weight: normal;
+    font-size: 1.1vw;
+    line-height:25px;
+    margin: 0;
+    margin-top: 10px;
+    color: white;
+}
+#today{
+    color: #dfebed;
+    font-size: 1.4em;
+    font-weight: 300;
+    align-items: center;
+}
+p.showed{
+    font-size: 1.8vw;
+}
