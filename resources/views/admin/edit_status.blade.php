@@ -27,6 +27,7 @@
             </div>
             @foreach($data as $item)
             <form method="post" action="{{url('/save_pengajuan/'.$item->id)}}">
+                <input type="hidden" id="userId" name="userId" value="{{$item->user_id}}">
                 @csrf
                 <div class="card-body">
                     <div class="form-group">

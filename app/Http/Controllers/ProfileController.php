@@ -44,7 +44,8 @@ class ProfileController extends Controller
         ]);
 
         if($request->hasFile('image')){
-            $filename = $request->file('image')->getClientOriginalName();
+            $image = $request->file('image');
+             $filename = auth()->user()->id . '-' . time() . '.' . $image->getClientOriginalExtension();
             if(auth()->user()->avatar){
                 Storage::delete('/public/images/'. auth()->user()->avatar);
             }

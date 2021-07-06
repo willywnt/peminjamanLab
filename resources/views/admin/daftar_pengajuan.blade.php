@@ -48,6 +48,7 @@
     <form method="post" action="{{url('/update_pengajuan/'.$item->id)}}">
     @csrf
     <input type="hidden" id="kode" name="kode" value="{{$item->id_komputer}}">
+    <input type="hidden" id="userId" name="userId" value="{{$item->user_id}}">
     <tr>
         <td>{{$loop->iteration}}</td>
         <td>{{$item->user->username}}</td>
@@ -116,6 +117,7 @@
     <form method="post" action="{{url('/selesaikan/'.$item->id)}}">
     @csrf
     <input type="hidden" id="kode" name="kode" value="{{$item->id_komputer}}">
+    <input type="hidden" id="userId" name="userId" value="{{$item->user_id}}">
     <tr>
         <td>{{$loop->iteration}}</td>
         <td>{{$item->user->username}}</td>

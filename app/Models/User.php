@@ -53,6 +53,9 @@ class User extends Authenticatable
     public function message(){
     	return $this->hasMany('App\Models\Pesan_User');
     }
+    public function notification(){
+    	return $this->hasMany('App\Models\Notification');
+    }
     public function isOnline(){
         return Cache::has('user-is-online-' . $this->id);
     }

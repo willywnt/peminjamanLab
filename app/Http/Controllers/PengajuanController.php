@@ -12,6 +12,7 @@ use App\Models\Komputer_303;
 use App\Models\Komputer_401;
 use App\Models\Komputer_402;
 use App\Models\Komputer_403;
+use App\Models\Notification;
 
 class PengajuanController extends Controller
 {
@@ -159,8 +160,10 @@ class PengajuanController extends Controller
     {
         $request->validate([
             'kode' => 'required',
-            'status_peminjaman' => 'required'
+            'status_peminjaman' => 'required',
+            'userId' => 'required'
         ]);
+
         $data = Daftar_pengajuan::where('id', $id)->get();
         $update = Daftar_pengajuan::where('id', $id)->update([
             'status_id' => $request->status_peminjaman
@@ -351,6 +354,31 @@ class PengajuanController extends Controller
             }
         }
 
+        if($request->status_peminjaman == '1'){
+            $title = "Menunggu pengajuan";
+            $text = "Silahkan menunggu konfirmasi dari admin atau anda bisa cek status pengajuan pada menu Status";
+        }
+        if($request->status_peminjaman == '2'){
+            $title = "Pengajuan diterima";
+            $text = "Terima kasih telah menunggu. Pengajuan anda sudah diterima, komputer anda siap untuk digunakan. gunakanlah fasilitas dengan baik";
+        }
+        if($request->status_peminjaman == '3'){
+            $title = "Peminjaman telah selesai";
+            $text = "Waktu peminjaman telah habis, terima kasih telah melakukan peminjaman";
+        }
+        if($request->status_peminjaman == '4'){
+            $title = "Pengajuan ditolak";
+            $text = "Maap pengajuan anda telah ditolak. silahkan hubungi admin untuk informasi lebih lanjut";
+        }
+
+        $notification = new Notification;
+        $notification->author = auth()->user()->name;
+        $notification->title = $title;
+        $notification->text = $text;
+        $notification->user_id = $request->userId;
+        $notification->reading = false;
+        $notification->save();
+
         return redirect()->back()->with('success','Data berhasil diupdate');
     }
 
@@ -369,6 +397,11 @@ class PengajuanController extends Controller
 
     public function selesai_pengajuan(Request $request, $id)
     {
+
+        $request->validate([
+            'userId' => 'required'
+        ]);
+
         $data = Daftar_pengajuan::where('id', $id)->get();
         $update = Daftar_pengajuan::where('id', $id)->update([
             'status_id' => '3'
@@ -431,6 +464,17 @@ class PengajuanController extends Controller
             }  
         }
 
+        $title = "Peminjaman telah selesai";
+        $text = "Waktu peminjaman telah habis, terima kasih telah melakukan peminjaman";
+
+        $notification = new Notification;
+        $notification->author = auth()->user()->name;
+        $notification->title = $title;
+        $notification->text = $text;
+        $notification->user_id = $request->userId;
+        $notification->reading = false;
+        $notification->save();
+        
         return redirect()->back()->with('success','Data berhasil diupdate');
     }
 
@@ -442,7 +486,8 @@ class PengajuanController extends Controller
             'hari' => 'required',
             'tanggal' => 'required',
             'jam' => 'required',
-            'status_peminjaman' => 'required'
+            'status_peminjaman' => 'required',
+            'userId' => 'required'
         ]);
         
         $data = Daftar_pengajuan::where('id', $id)->get();
@@ -640,6 +685,31 @@ class PengajuanController extends Controller
             }
         }
 
+        if($request->status_peminjaman == '1'){
+            $title = "Menunggu pengajuan";
+            $text = "Silahkan menunggu konfirmasi dari admin atau anda bisa cek status pengajuan pada menu Status";
+        }
+        if($request->status_peminjaman == '2'){
+            $title = "Pengajuan diterima";
+            $text = "Terima kasih telah menunggu. Pengajuan anda sudah diterima, komputer anda siap untuk digunakan. gunakanlah fasilitas dengan baik";
+        }
+        if($request->status_peminjaman == '3'){
+            $title = "Peminjaman telah selesai";
+            $text = "Waktu peminjaman telah habis, terima kasih telah melakukan peminjaman";
+        }
+        if($request->status_peminjaman == '4'){
+            $title = "Pengajuan ditolak";
+            $text = "Maap pengajuan anda telah ditolak. silahkan hubungi admin untuk informasi lebih lanjut";
+        }
+
+        $notification = new Notification;
+        $notification->author = auth()->user()->name;
+        $notification->title = $title;
+        $notification->text = $text;
+        $notification->user_id = $request->userId;
+        $notification->reading = false;
+        $notification->save();
+        
         return redirect()->back()->with('success','Data berhasil diupdate');
     }
 
